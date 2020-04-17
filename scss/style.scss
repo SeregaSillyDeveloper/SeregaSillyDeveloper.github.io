@@ -33,6 +33,16 @@ $textToHover:#d82727;
         color: $textToHover;
     }
 }
+.contact{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
 body{
     font:16px 'Roboto', sans-serif ;
 }
@@ -297,6 +307,46 @@ body{
     &-item--female::before{
         background-image: url(../img/collection_woman.png);
         top: -35%;
+    }
+}
+.footer{
+    background-color: #fcf5e6;
+}
+.content{
+    margin-bottom: 127px;
+    display: flex;
+    justify-content: space-around;
+    &-item{
+        &__article{
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+        &__link{
+            margin-bottom: 14px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        &__item{
+            color: #737373;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            &:hover{
+                color:$textToHover;
+            }
+        }
+        &__desc{
+            font-size: 15px;
+            margin-bottom: 35px;
+            & span{
+                display: block;
+                margin-top: 3px;
+            }
+        }
     }
 }
 
