@@ -52,6 +52,103 @@ body{
     min-height:650px;
     position: relative;
 }
+.sidebar{
+    position:absolute;
+    top: 0;
+    left:-270px;
+    bottom: 0;
+    width: 325px;
+    background-color: #000000;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease;
+    &.active{
+        left:0;
+        transition: 0.3s ease;
+    }
+    &-header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position:absolute;
+        top:25px;
+        &__logo{
+            background-image:url(../img/logo.png);
+            display: block;
+            width: 150px;
+            height: 119px;
+        }
+        &__burger{
+            width: 28px;
+            height: 28px;
+            position: relative;
+            left: 58px;
+            top:-45px;
+            &::before,
+            &::after{
+                content:'';
+                position: absolute;
+                width:100%;
+                background-color:$textToWords;
+                transition: 0.3s ease;
+
+            }
+            &::before{
+                height: 3px;
+                top:0;
+            }
+            &::after{
+                height: 3px;
+                bottom:0;
+            }
+            & span{
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color:$textToWords;
+                top: 13px;
+                transition: 0.3s ease;
+
+            }
+            &.active::before{
+                transform: rotate(45deg);
+                top: 13px;
+                transition: 0.3s ease;
+
+            }
+            &.active::after{
+                transform: rotate(-45deg);
+                bottom: 12px;
+                transition: 0.3s ease;
+
+            }
+            &.active span{
+                transform: scale(0);
+                transition: 0.3s ease;
+
+            }
+        }
+    }
+    &-menu__link{
+        text-align: center;
+        margin-bottom: 25px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &-menu__item{
+        text-decoration: none;
+        font-size: 17px;
+        color: $textToWords;
+        &:hover{
+            color: $textToHover;
+        }
+    }
+}
+
 .container{
     max-width: 1290px;
     margin: 0 auto;
