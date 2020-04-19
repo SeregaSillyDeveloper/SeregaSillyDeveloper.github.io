@@ -526,6 +526,18 @@ body {
       color: #fcf5e6;
       text-align: center;
       margin-bottom: 17px; }
+  .products-content--second {
+    grid-template-areas: 'i f d d' 'c c d d' 'c c a b';
+    display: none; }
+  .products-content--third {
+    grid-template-areas: 'c c a b' 'c c d d' 'i f d d';
+    display: none; }
+  .products-content--four {
+    grid-template-areas: 'a i c c' 'd d c c' 'd d b f';
+    display: none; }
+  .products-content--fifth {
+    grid-template-areas: 'f b c c' 'd d c c' 'd d i a';
+    display: none; }
 
 .page-collection {
   background-color: #fcf5e6; }

@@ -392,6 +392,22 @@ body{
             margin-bottom: 17px;
         }
     }
+    &--second{
+        grid-template-areas: 'i f d d' 'c c d d' 'c c a b';
+        display: none;
+    }
+    &--third{
+        grid-template-areas:'c c a b' 'c c d d' 'i f d d';
+        display: none;
+    }
+    &--four{
+        grid-template-areas:'a i c c' 'd d c c' 'd d b f';
+        display: none;
+    }
+    &--fifth{
+        grid-template-areas:'f b c c' 'd d c c' 'd d i a';
+        display: none;
+    }
 }
 .page-collection{
     background-color: #fcf5e6;
